@@ -5,6 +5,8 @@
   "dependencies": {
     "apollo-cache-inmemory": "^0.2.0-rc.1",
     "apollo-client": "^2.0.0-rc.3",
+    "apollo-link": "^0.8.0",
+    "apollo-link-error": "^0.2.0",
     "apollo-link-http": "^0.8.0",
     "graphql-tag": "^2.5.0",
     "react": "^15.6.1",

@@ -146,19 +146,13 @@ anymatch@^1.3.0:
     micromatch "^2.1.5"
     normalize-path "^2.0.0"
 
-apollo-cache-core@*:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/apollo-cache-core/-/apollo-cache-core-0.1.0.tgz#29e7033bc27f306e6d3207d7a08388b4f42488f1"
+apollo-cache-inmemory@^0.2.0-rc.1:
+  version "0.2.0-rc.1"
+  resolved "https://registry.npmjs.org/apollo-cache-inmemory/-/apollo-cache-inmemory-0.2.0-rc.1.tgz#7690d1bb31b2591e10009e7b662096c14f14440f"
   dependencies:
-    apollo-utilities "*"
-
-apollo-cache-inmemory@^0.1.0-0:
-  version "0.1.0-0"
-  resolved "https://registry.npmjs.org/apollo-cache-inmemory/-/apollo-cache-inmemory-0.1.0-0.tgz#0e7f2a3b10023e8333b81e3137de5e1956013e0a"
-  dependencies:
-    apollo-cache-core "*"
-    apollo-utilities "*"
-    graphql-anywhere "^4.0.0"
+    apollo-cache "^0.2.0-rc.0"
+    apollo-utilities "^0.2.0-rc.0"
+    graphql-anywhere "^4.0.0-rc.0"
 
 apollo-cache@^0.2.0-rc.0:
   version "0.2.0-rc.0"
@@ -182,11 +176,15 @@ apollo-link-dedup@0.6.0:
   version "0.6.0"
   resolved "https://registry.npmjs.org/apollo-link-dedup/-/apollo-link-dedup-0.6.0.tgz#67861f6e71f5237e514ace8e409ec7b972ce8a3c"
 
+apollo-link-error@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/apollo-link-error/-/apollo-link-error-0.2.0.tgz#9fdc07b4050df506f557ff9cc19ef8571e6812e6"
+
 apollo-link-http@^0.8.0:
   version "0.8.0"
   resolved "https://registry.npmjs.org/apollo-link-http/-/apollo-link-http-0.8.0.tgz#df02bccf3656f7db0aa196cc9e126dcbd4b47a0f"
 
-apollo-link@0.8.0:
+apollo-link@0.8.0, apollo-link@^0.8.0:
   version "0.8.0"
   resolved "https://registry.npmjs.org/apollo-link/-/apollo-link-0.8.0.tgz#efce6b35ae9ea5f6966a87054ba4893a5b6d960a"
   dependencies:
@@ -201,7 +199,7 @@ apollo-link@^0.6.1-beta.6:
     graphql "^0.11.3"
     zen-observable-ts "^0.4.3-beta.4"
 
-apollo-utilities@*, apollo-utilities@^0.2.0-beta.0, apollo-utilities@^0.2.0-rc.0:
+apollo-utilities@^0.2.0-beta.0, apollo-utilities@^0.2.0-rc.0:
   version "0.2.0-rc.0"
   resolved "https://registry.npmjs.org/apollo-utilities/-/apollo-utilities-0.2.0-rc.0.tgz#5ac93a839c5688e8f655dc7d5789a5d878f4351f"
 
@@ -2858,7 +2856,7 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-graphql-anywhere@^4.0.0:
+graphql-anywhere@^4.0.0-rc.0:
   version "4.0.0-rc.0"
   resolved "https://registry.npmjs.org/graphql-anywhere/-/graphql-anywhere-4.0.0-rc.0.tgz#5c062585f254767e77616ba1064dda44a535dd0e"
   dependencies:

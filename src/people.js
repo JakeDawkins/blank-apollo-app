@@ -25,7 +25,6 @@ const ADDRESSES_QUERY = gql`
 `;
 
 const People = props => {
-  console.log(props);
   const people = props.people;
 
   return (
@@ -45,6 +44,9 @@ const People = props => {
   );
 };
 
+// NOTE:
+// This data is being hijacked and broken in index.js by the hijack listener.
+// Don't rely on it being 100% accurate :)
 const withData = graphql(PERSON_QUERY, {
   props: data => {
     return { people: data.data.jakes };
