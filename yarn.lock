@@ -184,6 +184,13 @@ apollo-link-http@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/apollo-link-http/-/apollo-link-http-1.0.0.tgz#0450be89ae7e080722383c302f07135d364bc749"
 
+"apollo-link-state@https://github.com/apollographql/apollo-link-state.git":
+  version "0.1.0"
+  resolved "https://github.com/apollographql/apollo-link-state.git#a3d5c1711f0bfaefb44aa74eff8fa3e4829f273d"
+  dependencies:
+    apollo-utilities "^1.0.1"
+    graphql-anywhere "^4.0.0"
+
 apollo-link@1.0.0, apollo-link@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/apollo-link/-/apollo-link-1.0.0.tgz#3d334285789c217f95712ebce434d56ce7f3e991"
@@ -198,6 +205,10 @@ apollo-utilities@^0.2.0-beta.0:
 apollo-utilities@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/apollo-utilities/-/apollo-utilities-1.0.0.tgz#01b1a6aa60272a7d7cec18186ea379fe88156737"
+
+apollo-utilities@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/apollo-utilities/-/apollo-utilities-1.0.1.tgz#34b4df0bd6ed71d0afaa7c62489173dca5d07e92"
 
 append-transform@^0.4.0:
   version "0.4.0"

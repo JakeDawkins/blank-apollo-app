@@ -6,33 +6,37 @@ import ApolloClient from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
+import { parse } from 'graphql';
+import gql from 'graphql-tag';
+
 // links
 import { ApolloLink, Observable } from 'apollo-link';
 import { onError } from 'apollo-link-error';
+import { withClientState } from 'apollo-link-state';
 
 import People from './people';
 
-const hijackThatShit = new ApolloLink((operation, forward) => {
-  const observable = forward(operation);
+// XXX Temp until local caching is ready
+const local = {
+  todos: [],
+};
 
-  return new Observable(observer => {
-    const subscription = observable.subscribe({
-      next: r => {
-        r && r.data && r.data.jakes && r.data.jakes.length
-          ? observer.next({
-              data: {
-                jakes: r.data.jakes.map(j => ({ ...j, firstName: 'harambe' })),
-              },
-            })
-          : observer.next(r);
-      },
-      error: e => {
-        console.log('error', e);
-        observer.error(e);
-      },
-      complete: observer.complete.bind(observer),
-    });
-  });
+const withLocal = withClientState({
+  Query: {
+    todos: (parent, variables, context, info) => {
+      return local.todos;
+    },
+  },
+  Mutation: {
+    // update values in the store on mutations
+    addTodo: (parent, args, context, info) => {
+      const { message, title } = args;
+      local.todos.push({ message, title });
+    },
+    clearTodos: () => {
+      local.todos = [];
+    },
+  },
 });
 
 const errorLink = onError(
@@ -48,7 +52,7 @@ const errorLink = onError(
 );
 
 const links = ApolloLink.from([
-  hijackThatShit,
+  withLocal,
   errorLink,
   new HttpLink({
     uri: 'https://jzpv5zzjp.lp.gql.zone/graphql',

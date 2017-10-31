@@ -8,6 +8,7 @@
     "apollo-link": "^1.0.0",
     "apollo-link-error": "^1.0.0",
     "apollo-link-http": "^1.0.0",
+    "apollo-link-state": "https://github.com/apollographql/apollo-link-state.git",
     "graphql": "^0.11.7",
     "graphql-tag": "^2.5.0",
     "react": "^15.6.1",

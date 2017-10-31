@@ -53,4 +53,5 @@ const withData = graphql(PERSON_QUERY, {
   },
 });
 
-export default withData(People);
+export default People;
+// export default withData(People);
