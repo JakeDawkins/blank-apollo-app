@@ -16,7 +16,6 @@ import { withClientState } from 'apollo-link-state';
 
 import People from './people';
 
-// XXX Temp until local caching is ready
 const local = {
   todos: [],
 };
